@@ -4,7 +4,7 @@ require 'benchmark'
 
 BUILD_DIR = Pathname.new("build")
 
-USE_EXTENSIONS = false  # false # true
+USE_EXTENSIONS = true  # false # true
 num_tests = 1000
 
 desc "Generate temporary files"
@@ -13,7 +13,7 @@ task :generate do
   FileUtils.mkdir_p BUILD_DIR
   methods = USE_EXTENSIONS ? 1 : num_tests
   extensions = USE_EXTENSIONS ? num_tests : 0
-  method_body = "for var i = 0; i < n; i++ { println(i + 2) }; println(\"finished\")"
+  method_body = "for i in 0...n { print(i + 2) }; print(\"finished\")"
   File.open(BUILD_DIR + "main.swift", 'w') do |f|
     f.puts "class MyClass {"
     f.puts "var n = 1000"

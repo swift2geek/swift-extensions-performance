@@ -10,15 +10,15 @@ rake benchmark
 
 ## Results
 
-On my machine it produces the following results:
+On my machine (Macbook Pro 15'' 2017) it produces the following results:
 
 ![Benchmark results](results_chart.png?raw=true "Compilation times")
 
 | n | methods | extensions |
 | ---: | ---: | ---: |
-|100 | 0,15 | 0,15 |
-|1000 | 1,05 | 1,1067 |
-|2000 | 2,0933 | 2,4467 |
-|3000 | 3,2867 | 4,2 |
-|5000 | 6,033 | 8,6367 |
-|10000| 17,4767 | 33,21 |
+|100 | 0,55 | 0,3133 |
+|1000 | 2,07 | 2,1967 |
+|2000 | 4,1533 | 4,46 |
+|3000 | 6,2867 | 6,9467 |
+|5000 | 10,7267 | 12,71 |
+|10000| 23,64 | 38,2133 |
